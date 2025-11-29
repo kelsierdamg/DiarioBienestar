@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar.ConsultaRegistros"
+             Title="Consulta de registros">
+
+    <CollectionView x:Name="registrosList" Margin="10">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="15" Margin="5" CornerRadius="15" BackgroundColor="#F0F0F0">
+                    <VerticalStackLayout>
+
+                        <Label Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}"
+                               FontAttributes="Bold" />
+
+                        <Label Text="{Binding Description}"
+                               FontSize="14" />
+
+                        <Label Text="{Binding Activity, StringFormat='Actividad: {0:F1}'}" />
+                        <Label Text="{Binding Energy, StringFormat='Energía: {0}'}" />
+
+                        <Button Text="Eliminar"
+                                BackgroundColor="#D9534F"
+                                TextColor="White"
+                                CommandParameter="{Binding .}"
+                                Clicked="Eliminar_Clicked" />
+
+                    </VerticalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

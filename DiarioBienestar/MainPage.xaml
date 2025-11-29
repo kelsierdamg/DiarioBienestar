@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Frame CornerRadius="20" Padding="20" BackgroundColor="#D0E8FF">
+                <VerticalStackLayout>
+                    <Label Text="{Binding WelcomeText}"
+                           FontSize="22"
+                           HorizontalOptions="Center" />
+                    <Label Text="Hoy es un buen día para mejorar tu bienestar 😊"
+                           FontSize="18"
+                           HorizontalOptions="Center"
+                           Margin="0,10,0,0" />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

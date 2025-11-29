@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar.RegistroPage"
+             Title="RegistroPage">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <DatePicker
+            x:Name="datePicker" />
+
+        <Editor
+            x:Name="entryEditor"
+            Placeholder="Escribe aquí tu día..."
+            HeightRequest="120" />
+
+        <Label
+            Text="Actividad Física (0-10):" />
+        
+        <Slider
+            x:Name="activitySlider" Minimum="0" Maximum="10"
+            ValueChanged="activitySlider_ValueChanged" />
+
+        <ProgressBar
+            x:Name="activityProgress" Progress="0" />
+
+        <Label
+            Text="Energía (1-5)" />
+        
+        <Stepper
+            x:Name="energyStepper"
+            Minimum="1" Maximum="5" Increment="1" />
+
+        <Button
+            Text="Guardar Registro"
+            Clicked="Guardar_Clicked"
+            BackgroundColor="#4CAF50"
+            TextColor="White" />
+    </VerticalStackLayout>
+</ContentPage>
