@@ -9,9 +9,9 @@ namespace DiarioBienestar
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = this;
-
             WelcomeText = "Bienvenido a tu Diario de Bienestar";
+
+            BindingContext = this;
         }
     }
 }

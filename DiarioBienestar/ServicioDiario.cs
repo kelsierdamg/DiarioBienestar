@@ -8,9 +8,9 @@ public static class ServicioDiario
     private static readonly string FilePath =
         Path.Combine(FileSystem.AppDataDirectory, "diary.json");
 
-    public static async Task SaveAsync(ObservableCollection<EntradaDiaria> entries)
+    public static async Task SaveAsync(ObservableCollection<EntradaDiaria> entradas)
     {
-        var json = JsonSerializer.Serialize(entries);
+        var json = JsonSerializer.Serialize(entradas);
         await File.WriteAllTextAsync(FilePath, json);
     }
 
